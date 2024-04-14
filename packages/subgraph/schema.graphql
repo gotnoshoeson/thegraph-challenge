@@ -1,0 +1,8 @@
+type NewContract @entity(immutable: true) {
+  id: Bytes!
+  contractAddress: Bytes! # address
+  creator: Bytes! # address
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
