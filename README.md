@@ -1,4 +1,4 @@
-# 🏗 Scaffold-ETH 2 - UUPS Pattern
+# 🏗 Scaffold-ETH 2 - UUPS Patter - The Graph
 
 #### TL;DR - Universal Upgradeable Proxy Standard
 
