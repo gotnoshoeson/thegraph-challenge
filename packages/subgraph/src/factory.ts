@@ -1,5 +1,6 @@
 import { NewContract as NewContractEvent } from "../generated/Factory/Factory"
 import { NewContract } from "../generated/schema"
+import { YourContract } from "../generated/templates"
 
 export function handleNewContract(event: NewContractEvent): void {
   let entity = new NewContract(
@@ -13,4 +14,6 @@ export function handleNewContract(event: NewContractEvent): void {
   entity.transactionHash = event.transaction.hash
 
   entity.save()
+
+  YourContract.create(event.params.contractAddress)
 }

@@ -42,13 +42,7 @@ const deployedContracts = {
         {
           inputs: [],
           name: "createProxy",
-          outputs: [
-            {
-              internalType: "address",
-              name: "",
-              type: "address",
-            },
-          ],
+          outputs: [],
           stateMutability: "nonpayable",
           type: "function",
         },
@@ -193,16 +187,16 @@ const deployedContracts = {
               type: "address",
             },
             {
+              indexed: true,
+              internalType: "address",
+              name: "proxyAddress",
+              type: "address",
+            },
+            {
               indexed: false,
               internalType: "string",
               name: "newGreeting",
               type: "string",
-            },
-            {
-              indexed: false,
-              internalType: "bool",
-              name: "premium",
-              type: "bool",
             },
             {
               indexed: false,
@@ -450,7 +444,7 @@ const deployedContracts = {
   },
   11155111: {
     Factory: {
-      address: "0xaE5e98f58Dc96298730c7449c4D69FE0ab39C48a",
+      address: "0xb3C8aC64c8c11Aab5918104Ed7AAc709Aa564B73",
       abi: [
         {
           inputs: [
@@ -485,13 +479,7 @@ const deployedContracts = {
         {
           inputs: [],
           name: "createProxy",
-          outputs: [
-            {
-              internalType: "address",
-              name: "",
-              type: "address",
-            },
-          ],
+          outputs: [],
           stateMutability: "nonpayable",
           type: "function",
         },
@@ -544,7 +532,7 @@ const deployedContracts = {
       inheritedFunctions: {},
     },
     YourContract: {
-      address: "0x2e69796f48e57170B3eC079f88Eba123ADB7Cd98",
+      address: "0x130c83a570E2B7202b248befB26308B298C7f0Fd",
       abi: [
         {
           inputs: [
@@ -636,16 +624,16 @@ const deployedContracts = {
               type: "address",
             },
             {
+              indexed: true,
+              internalType: "address",
+              name: "proxyAddress",
+              type: "address",
+            },
+            {
               indexed: false,
               internalType: "string",
               name: "newGreeting",
               type: "string",
-            },
-            {
-              indexed: false,
-              internalType: "bool",
-              name: "premium",
-              type: "bool",
             },
             {
               indexed: false,

@@ -89,7 +89,7 @@ We're now using the ABI for YourContract2 but we haven't upgraded the contract y
 
 Now let's deploy a subgraph so that we can efficiently read data from the blockchain. "But I'll have to deploy a subgraph for each time I deploy a proxy, right?" Wrong. Thanks to templating with The Graph, we can deploy one subgraph that will index events from our Factory contract AND events emitted by all of the proxies that our Factory contract deploys on chain. Amazing!
 
-This portion coming soon...
+This portion coming soon...for now you can check out this wonderful article from Marcus Rein [Subgraph Data Templating for Proxy Factory systems](https://mirror.xyz/madavre.eth/0Gxsrq3ohCogRLPvQe-3fBYaz2nWopNpH8y3boq1aCw)
 
 If you're looking for a proxy pattern that upgrades all the proxy contracts with one transaction, check out the [Upgradeable Beacon Proxy pattern](https://blog.openzeppelin.com/blog/the-state-of-smart-contract-upgrades#beacons). A similar build will be coming soon for the Beacon Proxy pattern.
 

@@ -2,7 +2,7 @@ specVersion: 1.0.0
 indexerHints:
   prune: auto
 schema:
-  file: ./schema.graphql
+  file: schema.graphql
 dataSources:
   - kind: ethereum
     name: Factory
@@ -19,11 +19,11 @@ dataSources:
         - NewContract
       abis:
         - name: Factory
-          file: ./abis/Factory.json
+          file: Factory/abis/Factory.json
       eventHandlers:
         - event: NewContract(address,address)
           handler: handleNewContract
-      file: ./src/factory.ts
+      file: Factory/Factory.wasm
 templates:
   - kind: ethereum
     name: YourContract
@@ -41,7 +41,7 @@ templates:
         - Upgraded
       abis:
         - name: YourContract
-          file: ./abis/YourContract.json
+          file: YourContract/abis/YourContract.json
       eventHandlers:
         - event: GreetingChange(indexed address,indexed address,string,uint256)
           handler: handleGreetingChange
@@ -51,4 +51,4 @@ templates:
           handler: handleOwnershipTransferred
         - event: Upgraded(indexed address)
           handler: handleUpgraded
-      file: ./src/your-contract.ts
+      file: templates/YourContract/YourContract.wasm

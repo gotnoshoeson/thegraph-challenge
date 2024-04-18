@@ -25,8 +25,8 @@ contract YourContract is Initializable, UUPSUpgradeable, OwnableUpgradeable {
 	// Events: a way to emit log statements from smart contract that can be listened to by external parties
 	event GreetingChange(
 		address indexed greetingSetter,
+		address indexed proxyAddress,
 		string newGreeting,
-		bool premium,
 		uint256 value
 	);
 
@@ -67,7 +67,7 @@ contract YourContract is Initializable, UUPSUpgradeable, OwnableUpgradeable {
 		}
 
 		// emit: keyword used to trigger an event
-		emit GreetingChange(msg.sender, _newGreeting, msg.value > 0, 0);
+		emit GreetingChange(msg.sender, address(this), _newGreeting, 0);
 	}
 
 	// We're overriding this function that is inherited from UUPSUpgradeable and adding the onlyOwner modifier

@@ -16,12 +16,11 @@ contract Factory {
 		implementation = _implementation;
 	}
 
-	function createProxy() public returns(address) {
+	function createProxy() public {
 		ERC1967Proxy proxy = new ERC1967Proxy(implementation,
 			abi.encodeWithSelector(YourContract.initialize.selector,msg.sender)
 		);
 		proxyList.push(address(proxy));
-		return address(proxy);
 		emit NewContract(address(proxy), msg.sender);
 	}
 
